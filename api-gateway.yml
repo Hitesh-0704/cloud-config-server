@@ -9,21 +9,12 @@ spring:
       server:
         webflux:
           routes:
-            - id: ORDER-SERVICE
+            - id: order-service
               uri: lb://order-service
               predicates:
                 - Path=/order/**
 
-            - id: PAYMENT-SERVICE
+            - id: payment-service
               uri: lb://payment-service
               predicates:
                 - Path=/payment/**
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    prefer-ip-address: true
