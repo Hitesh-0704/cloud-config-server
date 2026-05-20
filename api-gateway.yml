@@ -5,7 +5,7 @@ spring:
   application:
     name: api-gateway
   main:
-    allow-bean-definition-overriding: true    # ← ADD THIS
+    allow-bean-definition-overriding: true
   cloud:
     gateway:
       server:
@@ -27,6 +27,6 @@ management:
         include: "*"
   endpoint:
     env:
-      enabled: true
+      access: unrestricted
     health:
       show-details: always
