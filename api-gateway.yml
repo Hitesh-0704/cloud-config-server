@@ -17,3 +17,14 @@ spring:
               uri: lb://payment-service
               predicates:
                 - Path=/payment/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    env:
+      enabled: true
+    health:
+      show-details: always
